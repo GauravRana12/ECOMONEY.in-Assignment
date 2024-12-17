@@ -1,52 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Economy</title>
     <link rel="stylesheet" href="./Styles/Style.css" />
 </head>
+
 <body>
     <header>
         <nav class="navbar">
             <!-- Sidebar -->
             <div class="logo_container">
-                <img class="logo_img" src="./Images/Logo.webp" alt="logo">
+                <img class="logo_img" title="Bolt" src="./Images/Logo.webp" alt="logo">
                 <b class="text_hidden">Bolt</b>
             </div>
             <div class="sideicon_container">
                 <div>
-                    <img class="side_icons" src="./Images/dashboard.png" alt="Dashboard_icon">
+                    <img class="side_icons" title="Dashboard" src="./Images/dashboard.png" alt="Dashboard_icon">
                     <p class="text_hidden">Dashboard</p>
                 </div>
                 <div>
-                    <img class="side_icons" src="./Images/analytics.png" alt="Analytics_icon">
+                    <img class="side_icons" title="Analytics" src="./Images/analytics.png" alt="Analytics_icon">
                     <p class="text_hidden">Analytics</p>
                 </div>
                 <div>
-                    <img class="side_icons" src="./Images/user.png" alt="profile_icon">
+                    <img class="side_icons" title="Profile" src="./Images/user.png" alt="profile_icon">
                     <p class="text_hidden">Profile</p>
                 </div>
                 <div>
-                    <img class="side_icons" src="./Images/power-off.png" alt="logout_icon">
+                    <img class="side_icons" title="Log-Out" src="./Images/power-off.png" alt="logout_icon">
                     <p class="text_hidden">Log-Out</p>
                 </div>
             </div>
         </nav>
 
-<!-- Profile Dropdown -->
+        <!-- Pop-Up -->
 
-     <div>
-        <button id="open-popup-btn">Open Logout Popup</button>
+        <div>
+            <button id="open-popup-btn">Open Logout Popup</button>
 
-    <!-- Popup container -->
-    <div id="popup-container" class="popup-container">
-        <div class="popup-content">
-            <img src="./Images/power-off.png" alt="Logout Icon" class="popup-image">
-            <p>Log Out</p>
+            <!-- Popup container -->
+            <div id="popup-container" class="popup-container">
+                <div class="popup-content">
+                    <!-- First Item: Logout -->
+
+                    <div class="popup-item">
+                        <img src="./Images/dashboard.png" alt="DashboardIcon" class="popup-image">
+                        <p>Dashboard</p>
+                    </div>
+                    <!-- Second Item: Profile -->
+
+                    <div class="popup-item">
+                        <img src="./Images/analytics.png" alt="analytics Icon" class="popup-image">
+                        <p>Analytics</p>
+                    </div>
+                    <div class="popup-item">
+                        <img src="./Images/user.png" alt="user Icon" class="popup-image">
+                        <p>Profile</p>
+                    </div>
+                    <div class="popup-item">
+                        <img src="./Images/power-off.png" alt="Logout Icon" class="popup-image">
+                        <p>Log Out</p>
+                    </div>
+
+                </div>
+            </div>
         </div>
-    </div>
-     </div>
+
+        <div class="dropdown">
+            <button id="dropdown-btn">Open Sidebar Dropdown</button>
+
+            <!-- Dropdown menu -->
+            <div id="dropdown-menu" style="background: rgb(236, 228, 228);
+    padding: 16px;" class="dropdown-menu">
+                <div class="dropdown-item">
+                    <img src="./Images/dashboard.png" alt="Dashboard Icon" class="dropdown-image">
+                    <p>Dashboard</p>
+                </div>
+                <div class="dropdown-item">
+                    <img src="./Images/analytics.png" alt="Analytics Icon" class="dropdown-image">
+                    <p>Analytics</p>
+                </div>
+                <div class="dropdown-item">
+                    <img src="./Images/user.png" alt="Profile Icon" class="dropdown-image">
+                    <p>Profile</p>
+                </div>
+                <div class="dropdown-item">
+                    <img src="./Images/power-off.png" alt="Log-Out Icon" class="dropdown-image">
+                    <p>Log-Out</p>
+                </div>
+            </div>
+        </div>
+
+
 
     </header>
 
@@ -54,4 +102,5 @@
 
     <script src="./Script/Script.js"></script>
 </body>
+
 </html>

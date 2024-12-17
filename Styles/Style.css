@@ -142,6 +142,7 @@ body{
   z-index: 1000;
   width: 200px; /* You can adjust width as per your preference */
   text-align: center;
+  background-color: rgb(188, 223, 188);
 }
 
 /* Popup content styles */
@@ -149,8 +150,61 @@ body{
   display: flex;
   align-items: center;
   gap: 10px;
+  cursor: pointer;
 }
 
+
+
+/* Button to open the popup */
+#open-popup-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 15px;
+}
+header{
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+
+
+
+
+.popup-container {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  width: 250px; /* Adjust the width if necessary */
+  text-align: center;
+}
+
+/* Popup content styles */
+.popup-content {
+  display: flex;
+  flex-direction: column; /* Stack the items vertically */
+  gap: 15px; /* Space between items */
+  align-items: center;
+}
+
+/* Popup item styling */
+.popup-item {
+  width: 100%;
+    display: flex
+;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* Image styling */
 .popup-image {
   width: 30px;
   height: 30px;
@@ -162,3 +216,57 @@ body{
   font-size: 16px;
   cursor: pointer;
 }
+
+
+
+
+
+
+
+
+
+
+
+/* New */
+
+
+//* Dropdown container (hidden by default) */
+.dropdown-menu {
+  display: none; /* Hidden by default */
+  position: absolute;
+  top: 100%; /* Position it right below the button */
+  left: 0;
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  width: 200px; /* You can adjust the width based on your preference */
+  text-align: left;
+}
+
+/* Dropdown item styles */
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 0;
+  cursor: pointer;
+}
+
+/* Image styling */
+.dropdown-image {
+  width: 30px;
+  height: 30px;
+}
+
+/* Button to open the dropdown */
+#dropdown-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 20px 20px 0px 0px;
+  position: relative; /* Required to position the dropdown relative to the button */
+}
+
+

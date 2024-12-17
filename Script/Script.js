@@ -74,3 +74,33 @@ popupContainer.addEventListener('click', (e) => {
     e.stopPropagation(); // Prevent the click from propagating
 });
 
+
+
+
+
+
+
+
+// NEw
+
+// Get the button and dropdown menu
+const dropdownBtn = document.getElementById('dropdown-btn');
+const dropdownMenu = document.getElementById('dropdown-menu');
+
+// Function to toggle the dropdown menu visibility
+dropdownBtn.addEventListener('click', () => {
+    // Toggle the visibility of the dropdown menu
+    if (dropdownMenu.style.display === 'block') {
+        dropdownMenu.style.display = 'none'; // Hide the dropdown
+    } else {
+        dropdownMenu.style.display = 'block'; // Show the dropdown
+    }
+});
+
+// Close the dropdown if clicked outside of it
+document.addEventListener('click', (e) => {
+    if (!dropdownBtn.contains(e.target) && !dropdownMenu.contains(e.target)) {
+        dropdownMenu.style.display = 'none'; // Hide the dropdown if clicked outside
+    }
+});
+
