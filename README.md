@@ -27,3 +27,5 @@ Mobile: The sidebar collapses to show only icons. Text becomes visible when hove
 Usage
 Popup: Opens with the "Open Popup" button. Close the popup using the "Close" button inside the modal.
 Dropdown: Click the "Dropdown" button to toggle the dropdown menu.
+Contributing
+Feel free to fork the repository and submit pull requests for improvements or bug fixes.
