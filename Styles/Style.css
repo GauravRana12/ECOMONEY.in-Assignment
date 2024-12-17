@@ -1,103 +1,73 @@
+/* Google Fonts Import */
 @import url('https://fonts.googleapis.com/css2?family=Lusitana&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-body{
+/* Basic Styling */
+body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
 }
-.navbar{
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Navbar Styling */
+.navbar {
   width: 20%;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  transition: box-shadow 0.3s ease;
 }
-.logo_container{
+
+.logo_container {
   display: flex;
   align-items: center;
   font-size: 18px;
   padding-left: 5px;
   padding-top: 15px;
 }
-.logo_container>b{
+
+.logo_container>b {
   cursor: pointer;
 }
-.logo_img{
+
+.logo_img {
   width: 50px;
   height: 50px;
   cursor: pointer;
 }
-.side_icons{
+
+/* Sidebar Icon Styling */
+.side_icons {
   width: 29px;
   height: 29px;
 }
-.sideicon_container{
+
+.sideicon_container {
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
-.sideicon_container>div{
-     display: flex;
-     gap: 12px;
-     align-items: center;
-     cursor: pointer;
-     transition: background 0.3s ease;
-     padding-left: 15px;
-     border-radius: 13px;
-}
 
-.sideicon_container>div>p{
-      font-weight: 500;
-}
-
-
-
-
-/* Basic Styling */
-
-
-.logo_container {
+.sideicon_container>div {
   display: flex;
-  align-items: center;
-  padding-left: 5px;
-}
-
-
-
-.text_hidden {
-  opacity: 0; /* Initially hide the text */
-  visibility: hidden; /* Make the text fully invisible */
-  transition: opacity 0.3s ease, visibility 0s 0.3s; /* Smooth opacity transition */
-}
-
-.sideicon_container > div {
-  display: flex;
-  align-items: center;
   gap: 12px;
+  align-items: center;
   cursor: pointer;
+  padding-left: 15px;
+  border-radius: 13px;
   transition: background 0.3s ease;
 }
 
-
-
-/* Active state for text */
-.text_visible {
-  opacity: 1; /* Show the text */
-  visibility: visible; /* Make the text visible */
-  transition: opacity 0.3s ease, visibility 0s; /* Smooth opacity transition */
+.sideicon_container>div>p {
+  font-weight: 500;
 }
 
-
-
-
-.navbar {
-  transition: box-shadow 0.3s ease; /* Transition for shadow */
-}
-
-.navbar.shadow {
-  box-shadow: 10px 0 20px rgba(0, 0, 0, 0.2); /* Right side shadow */
-}
-
+/* Text Visibility */
 .text_hidden {
   opacity: 0;
   visibility: hidden;
@@ -112,140 +82,72 @@ body{
   transition: opacity 0.3s ease, visibility 0s;
 }
 
-/* Default hover effect without text visibility */
-.sideicon_container > div {
-  transition: background 0.3s ease; /* Smooth background transition */
+/* Navbar Shadow */
+.navbar.shadow {
+  box-shadow: 10px 0 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Hover background effect when text is visible */
-.navbar.text-visible .sideicon_container > div:hover {
+/* Hover Effects */
+.navbar.text-visible .sideicon_container>div:hover {
   background-color: #ccffcc;
 }
 
-
-
-
-/* Pop-up container */
-
-/* Popup container (hidden by default) */
-/* Popup container (hidden by default) */
+/* Popup Container */
 .popup-container {
-  display: none; /* Hidden by default */
+  display: none;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: white;
+  background-color: rgb(188, 223, 188);
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   z-index: 1000;
-  width: 200px; /* You can adjust width as per your preference */
+  width: 250px;
   text-align: center;
-  background-color: rgb(188, 223, 188);
 }
 
-/* Popup content styles */
 .popup-content {
   display: flex;
+  flex-direction: column;
+  gap: 15px;
   align-items: center;
-  gap: 10px;
-  cursor: pointer;
 }
 
+.popup-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
 
+.popup-image {
+  width: 30px;
+  height: 30px;
+}
 
-/* Button to open the popup */
+/* Button to Open Popup */
 #open-popup-btn {
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
   margin: 15px;
 }
-header{
-  display: flex;
-  justify-content: space-between;
-  
-}
 
-
-
-
-
-.popup-container {
-  display: none; /* Hidden by default */
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
-  width: 250px; /* Adjust the width if necessary */
-  text-align: center;
-}
-
-/* Popup content styles */
-.popup-content {
-  display: flex;
-  flex-direction: column; /* Stack the items vertically */
-  gap: 15px; /* Space between items */
-  align-items: center;
-}
-
-/* Popup item styling */
-.popup-item {
-  width: 100%;
-    display: flex
-;
-    align-items: center;
-    justify-content: space-around;
-}
-
-/* Image styling */
-.popup-image {
-  width: 30px;
-  height: 30px;
-}
-
-/* Button to open the popup */
-#open-popup-btn {
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-
-
-
-
-
-
-
-
-
-
-/* New */
-
-
-//* Dropdown container (hidden by default) */
+/* Dropdown Menu */
 .dropdown-menu {
-  display: none; /* Hidden by default */
+  display: none;
   position: absolute;
-  top: 100%; /* Position it right below the button */
-  left: 0;
   background-color: white;
   padding: 10px;
   border-radius: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   z-index: 1000;
-  width: 200px; /* You can adjust the width based on your preference */
+  width: 200px;
   text-align: left;
 }
 
-/* Dropdown item styles */
 .dropdown-item {
   display: flex;
   align-items: center;
@@ -254,19 +156,43 @@ header{
   cursor: pointer;
 }
 
-/* Image styling */
 .dropdown-image {
   width: 30px;
   height: 30px;
 }
 
-/* Button to open the dropdown */
+/* Button to Open Dropdown */
 #dropdown-btn {
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
-  margin: 20px 20px 0px 0px;
-  position: relative; /* Required to position the dropdown relative to the button */
+  margin: 15px 20px 0px 0px;
+  position: relative;
 }
 
 
+
+
+/* Mobile Responsiveness */
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .navbar{
+    width: 40%;
+  }
+  .popup-container{
+    width: 165px;
+  }
+}
+
+@media (max-width: 500px){
+  .dropdown-menu{
+    width: 100px;
+    font-size: 10px;
+  }
+  .popup-container{
+    font-size: 12px;
+  }
+  .sideicon_container>div>p{
+    font-size: 10px;
+  }
+}
